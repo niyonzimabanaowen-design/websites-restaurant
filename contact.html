@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — The Cozy Plate</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Contact The Cozy Plate for reservations, feedback, or questions. Comfort food delivered with warmth." />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/The Cozy Plate logo.jpg" alt="The Cozy Plate logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark/light theme">🌙</button>
+        <button id="menuToggle" class="btn small menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container contact-page">
+    <h1>Contact Us</h1>
+    <p>Have a question, reservation request, or feedback? Send us a message — we’ll get back to you as soon as possible.</p>
+
+    <section class="contact-grid" aria-label="Contact section">
+      <!-- Contact Form -->
+      <form id="contactForm" class="contact-form" novalidate aria-labelledby="contactFormTitle">
+        <h2 id="contactFormTitle" class="sr-only">Contact Form</h2>
+
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required minlength="2" placeholder="Your Name" />
+
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+\- ]{7,}" placeholder="0712 345 678" />
+
+        <label for="message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" required minlength="10" placeholder="Type your message here"></textarea>
+
+        <button class="btn primary" type="submit">Send Message</button>
+
+        <div id="contactMsg" class="muted small" aria-live="polite"></div>
+      </form>
+
+      <!-- Contact Info -->
+      <aside class="contact-info" role="complementary" aria-labelledby="contactInfoTitle">
+        <h2 id="contactInfoTitle">Visit Us</h2>
+        <address>
+          The Cozy Plate<br />
+          123 Coffee Lane<br />
+          Cozy Town<br />
+          <strong>Phone:</strong> 0712 345 678<br />
+          <strong>Hours:</strong> Daily 8am–9pm
+        </address>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cozy Plate</h3>
+        <p>Comfort food & warm smiles.</p>
+      </div>
+
+      <nav aria-label="Footer quick links">
+        <h4>Quick Links</h4>
+        <ul class="plain-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contact</h4>
+        <address>
+          123 Coffee Lane<br />
+          Cozy Town<br />
+          Phone: 0712 345 678
+        </address>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      &copy; <span id="year"></span> The Cozy Plate — All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

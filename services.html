@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu — The Cozy Plate</title>
+  <meta name="description" content="Explore The Cozy Plate's delicious menu of comfort food, from roasted veggie bowls to signature pot pies." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/The Cozy Plate logo.jpg" alt="The Cozy Plate logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" aria-current="page">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark/light theme">🌙</button>
+        <button id="menuToggle" class="btn small menu-btn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-section">
+      <h1>Our Menu</h1>
+
+      <ul class="menu-grid">
+        <li class="menu-card">
+          <img src="images/Roasted Veggie Bowl.jpg" alt="Roasted Veggie Bowl" />
+          <div class="menu-content">
+            <h3>Roasted Veggie Bowl <span class="price" aria-label="Price">$200</span></h3>
+            <p>Seasonal roasted vegetables served over herbed quinoa with a lemon-tahini drizzle.</p>
+          </div>
+        </li>
+
+        <li class="menu-card">
+          <img src="images/Creamy Mushroom Pasta.jpg" alt="Creamy Mushroom Pasta" />
+          <div class="menu-content">
+            <h3>Creamy Mushroom Pasta <span class="price" aria-label="Price">$250</span></h3>
+            <p>Delicious creamy pasta made with fresh mushrooms and topped with grated parmesan.</p>
+          </div>
+        </li>
+
+        <li class="menu-card">
+          <img src="images/Signature Pot Pie.jpg" alt="Signature Pot Pie" />
+          <div class="menu-content">
+            <h3>Signature Pot Pie <span class="price" aria-label="Price">$150</span></h3>
+            <p>Flaky crust filled with veggies and slow-cooked gravy for the ultimate comfort meal.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <h3>The Cozy Plate</h3>
+      <p>Comfort food & warm smiles.</p>
+    </div>
+
+    <div class="container copyright">
+      &copy; <span id="year"></span> The Cozy Plate
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
