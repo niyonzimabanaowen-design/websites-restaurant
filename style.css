@@ -1,0 +1,374 @@
+/* ==============================
+   The Cozy Plate — 10/10 CSS
+   Fully responsive, accessible, dark mode ready
+   ============================== */
+
+/* ========== Variables & Theme ========== */
+:root {
+  --bg: #fff8f3;
+  --card: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6c6c6c;
+  --accent: #d85a3f;
+  --accent-2: #f2b8a0;
+  --nav: #ffffffcc;
+
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+/* Dark mode theme */
+html.dark {
+  --bg: #0f1412;
+  --card: #121817;
+  --text: #e6efe9;
+  --muted: #9aa69c;
+  --accent: #ff8a65;
+  --accent-2: #ca9b8b;
+  --nav: #0f1417cc;
+}
+
+/* ========== Base ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ========== Header ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--nav);
+  backdrop-filter: blur(6px);
+  z-index: 50;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.main-nav a {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current] {
+  background: var(--accent-2);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-btn {
+  display: none;
+  border-radius: var(--radius);
+}
+
+/* ========== Buttons ========== */
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn.small {
+  padding: 0.3rem 0.6rem;
+}
+
+/* ========== Hero ========== */
+.hero {
+  padding: 2rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cta-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ========== Features ========== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+/* ========== Carousel ========== */
+.carousel {
+  margin-top: 2rem;
+}
+
+.carousel-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 1rem;
+}
+
+.slide-caption {
+  padding: 0.5rem 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-btn.next {
+  right: 8px;
+}
+
+/* ========== Menu ========== */
+.menu-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.menu-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.menu-card img {
+  border-radius: var(--radius);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ========== Team ========== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* ========== Contact ========== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 1fr);
+  gap: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  width: 100%;
+  font-family: inherit;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+
+  .menu-btn[aria-expanded="true"] + .main-nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    background: var(--nav);
+    padding: 1rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 0.6rem 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========== Accessibility ========== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(216, 90, 63, 0.35);
+  outline-offset: 2px;
+}
+
+.hidden {
+  display: none;
+}
