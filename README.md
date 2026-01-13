@@ -1,1 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Cozy Plate — Home</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="The Cozy Plate — Comfort food made with care, seasonal and locally sourced." />
+</head>
 
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/The Cozy Plate logo.jpg" alt="The Cozy Plate logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="btn small" aria-label="Toggle dark/light theme">🌙</button>
+        <button id="menuToggle" class="btn small menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 id="heroTitle">Welcome to <span class="accent">The Cozy Plate</span></h1>
+          <p>Comfort food made with care — seasonal, local, and delicious.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="services.html">View Menu</a>
+            <a class="btn ghost" href="#carousel">See Specials</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/Roasted Veggie Bowl.jpg" alt="Delicious cozy food served on a plate" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container" aria-label="Our Features">
+      <article class="feature-card" aria-labelledby="feature1Title">
+        <h3 id="feature1Title">Fresh Ingredients</h3>
+        <p>We source daily from trusted local farmers to ensure the best quality.</p>
+      </article>
+
+      <article class="feature-card" aria-labelledby="feature2Title">
+        <h3 id="feature2Title">Cozy Ambience</h3>
+        <p>Relax and enjoy a warm, inviting atmosphere at our restaurant.</p>
+      </article>
+
+      <article class="feature-card" aria-labelledby="feature3Title">
+        <h3 id="feature3Title">Fast Delivery</h3>
+        <p>Your favorite meals delivered to your door in minutes.</p>
+      </article>
+    </section>
+
+    <!-- Carousel Section -->
+    <section id="carousel" class="carousel container" aria-label="Chef's Specials">
+      <h2>Chef's Specials</h2>
+      <div class="carousel-frame">
+        <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+
+        <ul class="carousel-slides" id="carouselSlides">
+          <li class="slide">
+            <img src="images/Roasted Veggie Bowl.jpg" alt="Roasted Veggie Bowl" />
+            <div class="slide-caption">Roasted Veggie Bowl — $200</div>
+          </li>
+
+          <li class="slide">
+            <img src="images/mushroom-pasta.jpg" alt="Creamy Mushroom Pasta" />
+            <div class="slide-caption">Creamy Mushroom Pasta — $9.00</div>
+          </li>
+
+          <li class="slide">
+            <img src="images/pot-pie.jpg" alt="Signature Pot Pie" />
+            <div class="slide-caption">Signature Pot Pie — $10.00</div>
+          </li>
+        </ul>
+
+        <button class="carousel-btn next" aria-label="Next slide">›</button>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter container" aria-labelledby="newsletterTitle">
+      <h2 id="newsletterTitle">Stay Updated</h2>
+      <p>Subscribe to receive updates on new menu items and special offers.</p>
+
+      <form id="signupForm" class="inline-form" novalidate>
+        <label for="signupEmail" class="sr-only">Email address</label>
+        <input type="email" id="signupEmail" placeholder="Your email" required />
+        <button class="btn primary" type="submit">Subscribe</button>
+      </form>
+
+      <small id="signupMsg" class="muted" aria-live="polite"></small>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-label="Footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Cozy Plate</h3>
+        <p>Comfort food & warm smiles.</p>
+      </div>
+
+      <nav>
+        <h4>Quick Links</h4>
+        <ul class="plain-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contact</h4>
+        <address>
+          123 Coffee Lane<br />
+          Cozy Town<br />
+          Phone: 0712 345 678
+        </address>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      &copy; <span id="year"></span> The Cozy Plate — All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
